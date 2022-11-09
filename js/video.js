@@ -1,4 +1,5 @@
 var video = document.querySelector("#player1");
+var oldSchool = document.querySelector("#oldSchoolClass")
 
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
@@ -40,5 +41,26 @@ document.querySelector("#skip").addEventListener("click", function() {
 		video.currentTime = video.currentTime + 10;
 	}
 
-	console.log("Current location is " + video.currentTime +" seconds")
+	console.log("Current location is " + video.currentTime + " seconds")
+});
+
+document.querySelector("#mute").addEventListener("click", function() {
+
+	if (video.muted == true) {
+		console.log("Unmute");
+		video.muted = false;
+		this.innerText = "Mute";
+	}
+	else {
+		console.log("Mute");
+		video.muted = true;
+		this.innerText = "Unmute";
+	}
+	
+});
+
+document.querySelector("#vintage").addEventListener("click", function() {
+	console.log("Apply old school class")
+
+
 });
